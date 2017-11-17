@@ -1,4 +1,4 @@
-version: "3.1"
+version: '3.1'
 services:
   zanatadb:
     image: "mariadb:10.3.2"
@@ -21,8 +21,6 @@ services:
       - "8080:8080"
     volumes:
       - zanata-files:/var/lib/zanata
-    links:
-      - zanatadb
     depends_on:
       - zanatadb
     environment:
